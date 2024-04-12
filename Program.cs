@@ -1,4 +1,30 @@
-﻿// Task 
+﻿// Task check the order history for order IDs containing B as the first string letter
+/* These are the order IDs we'd be using for this exercise
+B123
+C234
+A345
+C15
+B177
+G3003
+C235
+B179 */
+
+
+string[] orderIDs = { "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" };
+
+string[] fraudulentOrderIDs = new string [orderIDs.Length];
+
+int bin = 0;
+
+foreach (string items in orderIDs)
+{
+    if (items.Contains("B"))
+    {
+        fraudulentOrderIDs[bin] = items;
+        Console.WriteLine($"Fraudulent OrderID: {items}");
+        bin++;
+    }
+}
 
 
 // Task: take inventory of company product in inventory, finished and ready to be shipped out
